@@ -1,4 +1,4 @@
-import { include } from '../../lib';
+import { Include } from '../../lib';
 
 describe('include', () => {
   it('includes instance methods', () => {
@@ -8,7 +8,7 @@ describe('include', () => {
       }
     }
 
-    @include(ClassA)
+    @Include(ClassA)
     class ClassB {
 
     }
@@ -23,7 +23,7 @@ describe('include', () => {
       }
     }
 
-    @include(ClassA)
+    @Include(ClassA)
     class ClassB {
 
     }
@@ -68,9 +68,9 @@ describe('include', () => {
       }
     }
 
-    @include(ClassA)
-    @include(ClassB)
-    @include(ClassC)
+    @Include(ClassA)
+    @Include(ClassB)
+    @Include(ClassC)
     class ClassD extends BaseClass {
       method() {
         return super.method() + 5;
@@ -100,7 +100,7 @@ describe('include', () => {
       }
     }
 
-    @include(ClassA)
+    @Include(ClassA)
     class ClassB {
 
     }
